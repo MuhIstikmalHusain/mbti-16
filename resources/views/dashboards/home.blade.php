@@ -82,7 +82,7 @@
 
             <p>Pada dasarnya, Tipe Kepribadian seseorang terbagi berdasarkan 4 Domain</p>
             <ul>
-              <li><i class="bi bi-check-circle-fill"></i> <span>Bagaimana Seseorang Menyalurkan Energi (Ekstrofert/Introvert)</span></li>
+              <li><i class="bi bi-check-circle-fill"></i> <span>Bagaimana Seseorang Menyalurkan Energi (Ekstrovert/Introvert)</span></li>
               <li><i class="bi bi-check-circle-fill"></i> <span>Bagaimana Seseorang Menerima Informasi (Sensing/Intuitiv)</span></li>
               <li><i class="bi bi-check-circle-fill"></i> <span>Bagaimana Seseorang Membuat Keputusan (Thinking/Feeling)</span></li>
               <li><i class="bi bi-check-circle-fill"></i> <span>Bagamana Seseorang Menyikapi Dunia Luar (Judgingng/ Perceiving)</span></li>

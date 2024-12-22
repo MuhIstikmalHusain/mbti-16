@@ -73,9 +73,9 @@
             </div>
 
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
+              <!-- <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message">Pesan Anda telah terkirim. Terimakasih!</div>
+              <div class="sent-message">Pesan Anda telah terkirim. Terimakasih!</div> -->
 
               <button type="submit">Kirim Pesan</button>
             </div>

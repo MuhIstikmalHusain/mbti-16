@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Personality;
 
 class TestController extends Controller
 {
@@ -219,10 +220,10 @@ class TestController extends Controller
 
 
         // Tentukan hasil berdasarkan nilai total
-        $questionEnergi     = $countI > $countE ? 'Introvert'   : 'Ekstrovert';
-        $questionInformasi  = $countN > $countS ? 'Intuition'   : 'Sensing';
-        $questionChoose     = $countT > $countF ? 'Thinking'    : 'Feeling';
-        $questionPerspektif = $countJ > $countP ? 'Judging'     : 'Perceiving';
+        $questionEnergi     = $countI > $countE ? 'Introvert'  : 'Ekstrovert';
+        $questionInformasi  = $countN > $countS ? 'Intuition'  : 'Sensing';
+        $questionChoose     = $countT > $countF ? 'Thinking'   : 'Feeling';
+        $questionPerspektif = $countJ > $countP ? 'Judging'    : 'Perceiving';
 
 
         // Tentukan Type
@@ -231,10 +232,26 @@ class TestController extends Controller
         $type .= $countN > $countS ? 'N' : 'S';
         $type .= $countT > $countF ? 'T' : 'F';
         $type .= $countJ > $countP ? 'J' : 'P';
+
+        
         // Reset session setelah menghitung hasil
         // session()->forget('answers');
-
+        
+        $personality = Personality::where('type', $type)->first();
+        
+        // Jika tidak ditemukan, arahkan ke halaman 404
+        if (!$personality) {
+            abort(404, 'Personality not found');
+        }
         // Kirim data ke view
-        return view('dashboards.test-result', compact('questionEnergi', 'questionInformasi', 'questionChoose', 'questionPerspektif', 'countI', 'countE', 'countN', 'countS', 'countT', 'countF', 'countJ', 'countP', 'type'));
+        return view('dashboards.test-result', compact('questionEnergi', 'questionInformasi', 'questionChoose', 'questionPerspektif', 'countI', 'countE', 'countN', 'countS', 'countT', 'countF', 'countJ', 'countP', 'type', 'personality'));
+    }
+
+    public function details($type)
+    {
+        dd('hallo');
+
+        return view( 'dashboards.details', compact('personality'));
+        // return view('dashboards.detailsss', compact('personality'));
     }
 }

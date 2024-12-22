@@ -3,7 +3,7 @@
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="" class="logo d-flex align-items-center">
           <h1 class="sitename">KELOMPOK-7</h1>
           <span>.</span>
         </a>
@@ -11,8 +11,9 @@
         <!-- Navbar -->
         <nav id="navmenu" class="navmenu">
           <ul>
+            <!-- <li><a href="/test-result">Hasil<br></a></li> -->
             <li><a href="/" class="active">Beranda<br></a></li>
-            <li><a href="/tipe-kepribadian">Tipe Kepribadian</a></li>
+            <li><a href="/personality">Tipe Kepribadian</a></li>
             <li><a href="/profesional">Layanan Profesional</a></li>
             <li><a href="contact">Contact</a></li>
           </ul>
@@ -20,10 +21,10 @@
         </nav>
 
         <!-- Login -->
-        <nav id="navmenu" class="navmenu">
+        <!-- <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="">Login</a></li>
-          </ul>
+          </ul> -->
 
         </nav>
 
